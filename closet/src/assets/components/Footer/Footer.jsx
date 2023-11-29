@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import style from './Footer.module.css';
 import logo from "../../img/logo.png"
 import { FaWhatsapp } from "react-icons/fa";
@@ -75,7 +73,7 @@ function Footer() {
         </div>
 
         <div className={style.copyright}>
-            &#169
+            &copy;
             2023 all rights reserved
         </div>
         </div>

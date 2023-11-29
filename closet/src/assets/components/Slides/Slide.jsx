@@ -1,8 +1,7 @@
-/* eslint-disable no-unused-vars */
 import style from "./Slide.module.css"
 import React from 'react';
 import blusa from '../../img/blusa.png'
-import baixe from '../../img/Baixe o.png'
+import baixe from '../../img/baixeo.jpg'
 
 function Slide () {
   return (

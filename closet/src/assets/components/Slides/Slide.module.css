@@ -102,8 +102,11 @@
     justify-content: center;
 }
 
-.baixe{
-    width: 92%;
+.baixe img{
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    border-radius: 45px ;
 }
 
 .texts {
@@ -138,10 +141,3 @@
     height: 27px;
     font-size: 14px;
 }
-
-
-
-
-
-
-
