@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
-
 import { useState } from 'react'
 import './App.css'
-import Home from '../src/assets/components/Home/Home'
+import Rotas  from './assets/Rotas/Rotas'
 
 
 function App() {
   return (
-    <Home/>
+    <Rotas/>
   )
 }
 
