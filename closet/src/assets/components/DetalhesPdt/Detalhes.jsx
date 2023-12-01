@@ -5,10 +5,57 @@ import react, { useState } from "react";
 import camisas from "../../img/camisas.png";
 import Nav from "../NavBar/Nav";
 import Footer from "../Footer/Footer";
-import { IoMdStar, CiHeart, IoMdHeart } from "react-icons/io";
-
+import { IoMdStar } from "react-icons/io"; //estrelas
+import { IoIosStarOutline } from "react-icons/io"; //estrelas preenchidas
+import { IoMdHeartEmpty } from "react-icons/io"; //coração
+import { IoMdHeart } from "react-icons/io"; //coração preenchido
+import Class from "../Classificação/Class";
 
 function Detalhes() {
+  const [selectedIcon, setSelectedIcon] = useState("heart");
+
+  const handleClick = () => {
+    // Lógica para alternar entre ícones
+    if (selectedIcon === "heart") {
+      setSelectedIcon("mdheart");
+    } else if (selectedIcon === "mdheart") {
+      setSelectedIcon("thumbs-up");
+    } else {
+      setSelectedIcon("heart");
+    }
+  };
+
+  // Mapeia o ícone selecionado para o componente correspondente
+  const renderSelectedIcon = () => {
+    switch (selectedIcon) {
+      case "heart":
+        return <IoMdHeartEmpty />;
+      case "mdheart":
+        return <IoMdHeart />;
+      case "thumbs-up":
+        return <IoMdHeart />;
+      default:
+        return null;
+    }
+  };
+
+  const [selectedStar, setSelectedStar] = useState(0);
+
+  // Simplifiquei a lógica de handleClickStar
+  const handleClickStar = (starValue) => {
+    // Se a estrela clicada for a mesma que já está selecionada, desselecione-a
+    if (selectedStar === starValue) {
+      setSelectedStar(0);
+    } else {
+      setSelectedStar(starValue);
+    }
+  };
+
+  // Simplifiquei a lógica de renderSelectedStar
+  const renderSelectedStar = (starValue) => {
+    return selectedStar >= starValue ? <IoMdStar /> : <IoIosStarOutline />;
+  };
+
   return (
     <>
       <Nav />
@@ -34,23 +81,26 @@ function Detalhes() {
                 Não entendi, Que merda é essa?
               </h3>
               <div className={style.icon}>
-                <IoMdStar />
-                <IoMdStar />
-                <IoMdStar />
-                <IoMdStar />
-                <IoMdStar />
-                <p>5.0</p>
+                {[1, 2, 3, 4, 5].map((starValue) => (
+                  <div
+                    key={starValue}
+                    onClick={() => handleClickStar(starValue)}
+                  >
+                    {renderSelectedStar(starValue)}
+                  </div>
+                ))}
               </div>
               <div className={style.carrinho}>
                 <button>Adicionar ao Carrinho</button>
-                <div className={style.coracao}>
-                  <CiHeart />
+                <div className={style.coracao} onClick={handleClick}>
+                  {renderSelectedIcon()}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Class/>
       <Footer />
     </>
   );
