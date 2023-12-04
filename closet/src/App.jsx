@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import './App.css'
-import Rotas  from './assets/Rotas/Rotas'
+import Rotas  from './Rotas/Rotas'
 
 
 function App() {

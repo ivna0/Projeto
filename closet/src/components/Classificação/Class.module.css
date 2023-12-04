@@ -1,0 +1,125 @@
+.Container{
+    width: 100%;
+    height: 1585px;
+    background: #B2C4CC;
+    /* border: 1px solid red; */
+}
+
+.Container h1{
+    font-size: 35px;
+    padding-left: 44%;
+    margin-bottom: 5%;
+
+}
+
+.Comentar {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
+.div2{
+    margin-top: -30px;
+}
+
+.Imagem{
+    font-size: 20%;
+}
+
+.icon{
+    display: flex;
+    margin-left: 25%;
+    font-size: 35px;
+    margin-top: -20%;
+    margin-bottom: 3%;
+    color: rgb(188, 142, 42);
+}
+
+/* .icon button{
+    width: 80px;
+    height: 30px;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    margin-left: 50%;
+} */
+
+.input textarea{
+    width: 60%;
+    margin-left: 25%;
+    border:none;
+    border-radius: 25px 2px 2px 2px;
+    padding-left: 3%;
+    
+}
+
+.div1 img{
+    width: 15%;
+    margin: 15px;
+    border-radius: 15px;
+    margin-left: 5%;    
+}
+
+.div2 img{
+    width: 15%;
+    margin: 15px;
+    border-radius: 15px;
+    margin-left: 5%;   
+} 
+
+.div3 img{
+    width: 15%;
+    margin: 15px;
+    border-radius: 15px;
+    margin-left: 5%;   
+}
+
+.Avaliar{
+    margin-top: -10px;
+}
+
+.Avaliar button{
+    width: 20%;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-left: 42%;
+    color: aliceblue;
+    background: #09283F;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:  0.3s ease;
+    
+}
+
+.Avaliar button:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.X{
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: 1.5%; 
+    color: #09283F;
+    margin-top: -3px;
+}
+
+.Editar {
+    font-size: 24px;
+    margin-left: 45%;
+    color: #09283F;
+   
+}
+
+.Lixeira{
+    font-size: 24px;
+    margin-left: 2%;
+    color: #09283F; 
+}
+
+.Enviar{
+    font-size: 24px;
+    margin-left: 2%;
+    color: #09283F;
+}
