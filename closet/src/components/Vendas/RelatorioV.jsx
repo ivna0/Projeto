@@ -3,7 +3,6 @@ import style from './RelatorioV.module.css'
 import Nav from "../NavBar/Nav"
 import Footer from "../Footer/Footer"
 import React, { useState } from 'react';
-import { IoClose } from "react-icons/io5";
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 function RelatorioV() {
@@ -53,7 +52,7 @@ function RelatorioV() {
         {
           name: 'Page H',
             // uv: 3490,
-            Lingerie: 4300,
+            Sensual: 4300,
             // amt: 2100,
           },
           {
@@ -64,20 +63,73 @@ function RelatorioV() {
           },
       ];
 
-     const [vendasVisivel, setVendasVisivel] = useState(false);
+      const data2 = [
+        {
+          name: 'Page J',
+        //   uv: 4000,
+          Blusas: 2500,
+        //   amt: 2400,
+        },
+        {
+          name: 'Page K',
+        //   uv: 3000,
+          Calça: 1408,
+        //   amt: 2210,
+        },
+        {
+          name: 'Page L',
+        //   uv: 2000,
+          Vestido: 9830,
+        //   amt: 2290,
+        },
+        {
+          name: 'Page M',
+        //   uv: 2780,
+          Sandália: 3918,
+        //   amt: 2000,
+        },
+        {
+          name: 'Page N',
+        //   uv: 1890,
+          Short: 4810,
+        //   amt: 2181,
+        },
+        {
+          name: 'Page O',
+        //   uv: 2390,
+          Tẽnis: 3700,
+        //   amt: 2500,
+        },
+        {
+          name: 'Page P',
+        //   uv: 3490,
+          Regata: 4320,
+        //   amt: 2100,
+        },
+        {
+          name: 'Page Q',
+            // uv: 3490,
+            Meia: 4300,
+            // amt: 2100,
+          },
+          {
+            name: 'Page R',
+            // uv: 3490,
+            Lingerie: 4300,
+            // amt: 2100,
+          },
+      ];
       
   return (
     <>
     <Nav/>
     <div className={style.Topo}>
-        <button onClick={()=> setVendasVisivel(true)}>Vendas</button>
+        <button>Vendas</button>
         <button>Usuários</button>
     </div>
-    { vendasVisivel && 
     <ResponsiveContainer className={style.Grafico1} width="100%" height={700}>
         <div className={style.Espaço}></div>
         <h1>Categoria</h1>
-        <icon onClick={()=> setVendasVisivel(false)} className={style.X}><IoClose/></icon>
      <BarChart
           width={500}
           height={400}
@@ -86,7 +138,7 @@ function RelatorioV() {
             top: 60,
             right: 30,
             left: 20,
-            bottom: 130,
+            bottom: 170,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -101,11 +153,42 @@ function RelatorioV() {
             <Bar dataKey="Infantil" fill="#A3D2B0"></Bar>
             <Bar dataKey="Feminino" fill="#D2C8A3"></Bar>
             <Bar dataKey="Esportivo" fill="#CCA3D2"></Bar>
-            <Bar dataKey="Lingerie" fill="#A3B6D2"></Bar>
+            <Bar dataKey="Sensual" fill="#A3B6D2"></Bar>
             <Bar dataKey="Jeans" fill="#7d9fa6"></Bar>
         </BarChart>
     </ResponsiveContainer>
-}
+
+    <ResponsiveContainer className={style.Grafico1} width="100%" height={700}>
+        <div className={style.Espaço}></div>
+        <h1>Produtos</h1>
+     <BarChart
+          width={500}
+          height={400}
+          data={data2}
+          margin={{
+            top: 60,
+            right: 30,
+            left: 20,
+            bottom: 170,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+            <Bar dataKey="Blusas" fill="#8884d8"></Bar>
+            <Bar dataKey="Calça" fill="#438282"></Bar>
+            <Bar dataKey="Vestido" fill="#D2A3A3"></Bar>
+            <Bar dataKey="Sandália" fill="#DBB4B4"></Bar>
+            <Bar dataKey="Short" fill="#A3D2B0"></Bar>
+            <Bar dataKey="Tẽnis" fill="#D2C8A3"></Bar>
+            <Bar dataKey="Regata" fill="#CCA3D2"></Bar>
+            <Bar dataKey="Meia" fill="#A3B6D2"></Bar>
+            <Bar dataKey="Lingerie" fill="#7d9fa6"></Bar>
+        </BarChart>
+    </ResponsiveContainer>
+
           <Footer/>
     </>
   );

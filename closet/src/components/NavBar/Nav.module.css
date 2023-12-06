@@ -45,3 +45,35 @@
       padding: 10px;
       border: none;
      }
+
+     .dropdown{
+      display: block;
+      z-index: 1000
+     }
+     
+     .dropdown li{
+        padding: 10px 15px;
+        color: #fff;
+        cursor: pointer;
+        opacity: 1;
+     }
+
+     .active ul{
+      display: flex;
+      flex-direction: column;
+     }
+
+     .dropdown .active{
+      background-color: #09283F;
+      position: absolute;
+      /* box-shadow: 2px 2px 5px rgb(0, 0, 0); */
+      margin: 3.2em;
+      margin-left: 10%;
+      border-radius: 10px;
+     }
+
+     .dropdown li:hover{
+      background: #0b3a5b;
+      border-radius: 5px;
+
+     }

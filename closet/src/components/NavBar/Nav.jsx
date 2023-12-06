@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import style from "./Nav.module.css"
-import logo from "../../assets/img/logo.png"
+import logo from "../../img/logo.png"
 import { FaSearch } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5"
 import { FaHeart } from "react-icons/fa";
@@ -14,6 +15,14 @@ function Nav() {
     setComponenteVisivel(!componenteVisivel);
   };
 
+
+  const [opçoes, setOpçoes] = useState(false);
+
+  const toggleOptions = () => {
+    setOpçoes(!opçoes);
+  };
+
+  
   return (
     <header className={style.header}> 
     <div className={style.navBar}>
@@ -27,9 +36,21 @@ function Nav() {
               <input type="text" placeholder="Pesquisar produto" />
             </div>
           )}
+
+          {opçoes && (
+            <div className={style.dropdown}>
+              <div className={style.active}>
+              <ul>
+                <li>Login</li>
+                <li>Cadastro</li>
+                <li>Relatório</li>
+              </ul>
+              </div>
+              
+            </div>
+          )}
             <li className={style.item}><a href="#" onClick={toggleSearchField}><FaSearch/></a></li>
-            <li className={style.item}><a href="#"><IoPersonCircleSharp /></a></li>
-            <li className={style.item}><a href="#"><FaHeart/></a></li>
+            <li className={style.item}><a href="#" onClick={toggleOptions}><IoPersonCircleSharp /></a></li>
             <li className={style.item}><a href="#"><IoBagHandle/></a></li>
           </ul>
 
