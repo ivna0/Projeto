@@ -48,6 +48,8 @@
 
      .dropdown{
       display: block;
+      height: 10vh;
+      position: relative;
       z-index: 1000
      }
      
@@ -61,6 +63,8 @@
      .active ul{
       display: flex;
       flex-direction: column;
+    z-index: 500;
+
      }
 
      .dropdown .active{

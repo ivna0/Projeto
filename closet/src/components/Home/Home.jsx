@@ -1,6 +1,6 @@
 import style from "./Home.module.css";
 import Nav from "../NavBar/Nav";
-import mulher from "../../assets/img/pretaazul.png"
+import mulher from "../../img/pretaazul.png"
 import Slide from "../Slides/Slide";
 import Footer from "../Footer/Footer";
 

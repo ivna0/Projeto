@@ -44,12 +44,13 @@ function Nav() {
                 <li>Login</li>
                 <li>Cadastro</li>
                 <li>Relatório</li>
+                <li>Curtidos</li>
               </ul>
               </div>
               
             </div>
           )}
-            <li className={style.item}><a href="#" onClick={toggleSearchField}><FaSearch/></a></li>
+            <li className={style.item}><a href="#" onClick={toggleSearchField} to="/filtro"><FaSearch/></a></li>
             <li className={style.item}><a href="#" onClick={toggleOptions}><IoPersonCircleSharp /></a></li>
             <li className={style.item}><a href="#"><IoBagHandle/></a></li>
           </ul>
