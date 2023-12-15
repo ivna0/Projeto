@@ -10,7 +10,7 @@
 
 .Container{
     width: 24%;
-    height: 820px;
+    height: 85em;
     padding: 2rem 6%;
     display: flex;
     flex-wrap: wrap;
@@ -20,12 +20,14 @@
 
 .Container h1{
     color: hsl(205, 50%, 28%);
+    margin-top: 18%;
+    font-size: 45px;
 
 }
 
 .h1, h2{
     color: #244D6B;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .Categorias{
@@ -36,6 +38,18 @@
 }
 
 .categore{
+    display:flex ;
+    gap: .5em;
+}
+
+.produtos{
+    margin-top: 15px;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.produto{
     display:flex ;
     gap: .5em;
 }
@@ -64,7 +78,7 @@
 }
 
 .preços button{
-    padding: 4px;
+    padding: 4.4px;
     margin: 3px;
     border: none;
     color: #ffffff;
@@ -72,3 +86,7 @@
     border-radius: 8px;
     cursor: pointer;
 } 
+
+.preços button:hover{
+    background: #2d4f66;
+}

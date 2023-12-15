@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import style from './Footer.module.css';
-import logo from "../../assets/img/logo.png"
+import logo from "../../img/logo.png"
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

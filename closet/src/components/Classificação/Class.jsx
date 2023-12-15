@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
 import style from "./Class.module.css";
-import Top from "../../assets/img/top.jpeg";
+import Top from "../../img/top.jpeg";
 import { IoMdStar } from "react-icons/io"; //estrela preenchida
 import { IoIosStarOutline } from "react-icons/io"; //estrela 
 import react, { useState } from "react";
@@ -12,7 +13,6 @@ import { RiSendPlaneFill } from "react-icons/ri"; //enviar
 import { TextArea } from "../TextArea/TextArea";
 
 function NovoComentario(){
-  const [avaliacaoVisivel, setAvaliacaoVisivel] = useState(false);
 
   const [selectedStar, setSelectedStar] = useState(0);
 
@@ -23,11 +23,37 @@ function NovoComentario(){
     } else {
       setSelectedStar(starValue);
     }
-  };
+   };
 
-  const renderSelectedStar = (starValue) => {
-    return selectedStar >= starValue ? <IoMdStar /> : <IoIosStarOutline />;
-  };
+    const renderSelectedStar = (starValue) => {
+      return selectedStar >= starValue ? <IoMdStar /> : <IoIosStarOutline />;
+    };
+
+    //Novo Comentario
+
+    const [commentText, setCommentText] = useState('')
+    const [isEditing, setIsEditing] = useState(false)
+
+    const handleEdit = () => {
+     setIsEditing(true)  
+    };
+  
+    const habdleDelete = () => {
+      console.log('Excluir comentario');
+    };
+
+    const handleSend = () => {
+      if (isEditing) {
+        console.log('Editar comentario:', commentText);
+      }
+      else {
+        console.log('Enviar novo comentario:', commentText);
+      }
+
+      setCommentText('');
+      setIsEditing(false);
+    }
+
 
   return (
     <>
@@ -44,7 +70,6 @@ function NovoComentario(){
                <h4>{<IoMdStar/>}</h4>
                <h4>{<IoMdStar/>}</h4>
             </div>
-
 
             <TextArea value="Anonimo: Adorei " className={style.input} />
           </div>
@@ -72,16 +97,8 @@ function NovoComentario(){
                <h4>{<IoMdStar/>}</h4>
             </div>
             <TextArea value="Anonimo: Adorei" className={style.input} />
-
           </div>
-
-          <div className={style.Avaliar}>
-          <button onClick={()=> setAvaliacaoVisivel(true)}>Avaliar Produto</button>
-         
           </div>
-
-          { avaliacaoVisivel && 
-          <>
             <div className={style.div2}>
               <img src={Top}></img>
               <div className={style.icon}>
@@ -90,18 +107,22 @@ function NovoComentario(){
                     {renderSelectedStar(starValue)}
                   </div>
                 ))}
-                <icon className={style.Editar}><HiOutlinePencilAlt/></icon>
-                <icon className={style.Lixeira}><IoTrashBin/></icon>
-                <icon className={style.Enviar}><RiSendPlaneFill/></icon>
-                <icon onClick={()=> setAvaliacaoVisivel(false)}className={style.X}><IoClose/></icon>
-                
+                <icon onClick={handleEdit} className={style.Editar}><HiOutlinePencilAlt/></icon>
+                <icon onClick={habdleDelete} className={style.Lixeira}><IoTrashBin/></icon>
+                <icon onClick={handleSend} className={style.Enviar}><RiSendPlaneFill/></icon>
               </div>
               <div className={style.input}>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea 
+                name="" 
+                id="" 
+                cols="30" 
+                rows="10"> 
+                onChange={(e) => setCommentText(e.target.value)}
+                </textarea>
               </div>
+              <div className={style.Avaliar}>
+          <button>Avaliar Produto</button>
             </div>
-          </> }
-
         </div>
       </div>
     </>

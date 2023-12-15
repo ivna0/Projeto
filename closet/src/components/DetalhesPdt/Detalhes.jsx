@@ -2,10 +2,11 @@
 /* eslint-disable no-unused-vars */
 import style from "./Detalhes.module.css";
 import react, { useState } from "react";
-import camisas from "../../assets/img/camisas.png";
-import Nav from "../NavBar/Nav";
+import camisas from "../../img/camisas.png";
+import Nav from "../NavBarCliente/Nav";
 import Footer from "../Footer/Footer";
-import { IoIosStarOutline } from "react-icons/io"; //estrelas preenchidas
+import { IoMdStar } from "react-icons/io"; //estrela preenchida
+import { IoIosStarOutline } from "react-icons/io"; //estrelas
 import { IoMdHeartEmpty } from "react-icons/io"; //coração
 import { IoMdHeart } from "react-icons/io"; //coração preenchido
 import NovoComentario from "../Classificação/Class";
@@ -38,22 +39,6 @@ function Detalhes() {
     }
   };
 
-  // const [selectedStar, setSelectedStar] = useState(0);
-
-  // // Simplifiquei a lógica de handleClickStar
-  // const handleClickStar = (starValue) => {
-  //   // Se a estrela clicada for a mesma que já está selecionada, desselecione-a
-  //   if (selectedStar === starValue) {
-  //     setSelectedStar(0);
-  //   } else {
-  //     setSelectedStar(starValue);
-  //   }
-  // };
-
-  // // Simplifiquei a lógica de renderSelectedStar
-  // const renderSelectedStar = (starValue) => {
-  //   return selectedStar >= starValue ? <IoMdStar /> : <IoIosStarOutline />;
-  // };
 
   return (
     <>
@@ -80,19 +65,12 @@ function Detalhes() {
                 Não entendi, Que merda é essa?
               </h3>
               <div className={style.icon}>
-                <IoIosStarOutline/>
-                <IoIosStarOutline/>
-                <IoIosStarOutline/>
-                <IoIosStarOutline/>
-                <IoIosStarOutline/>
-                {/* {[1, 2, 3, 4, 5].map((starValue) => (
-                  <div
-                    key={starValue}
-                    onClick={() => handleClickStar(starValue)}
-                  >
-                    {renderSelectedStar(starValue)}
-                  </div>
-                ))} */}
+                <IoMdStar/>
+                <IoMdStar/>
+                <IoMdStar/>
+                <IoMdStar/>
+                <IoMdStar/>
+        
               </div>
               <div className={style.carrinho}>
                 <button>Adicionar ao Carrinho</button>

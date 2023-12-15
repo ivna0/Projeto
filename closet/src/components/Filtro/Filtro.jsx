@@ -1,12 +1,27 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import { useState } from 'react';
 import style from "./Filtro.module.css";
-import Nav from "../NavBar/Nav";
-import friday from "../../assets/img/friday.png"
+import Nav from "../NavBarCliente/Nav";
+import friday from "../../img/friday.png"
 import Produto from "../Produtos/Produto";
 import Footer from "../Footer/Footer";
 
-function Filtro() {
+function Filtro (){
+
+  // const [selectedOption, setSelectedOption] = useState(null);
+
+  // const handleRadioChange = (value) => {
+  //   if (selectedOption === value) {
+  //     // Se a opção já estiver selecionada, desmarque-a
+  //     setSelectedOption(null);
+  //   } else {
+  //     // Se não, selecione a opção
+  //     setSelectedOption(value);
+  //   }
+  //   }
+
   return (
 
     <div>
@@ -21,7 +36,14 @@ function Filtro() {
         <div className={style.Categorias}>
 
       <div className={style.categore}>
-        <input type="radio" id="Infantil"></input>
+        <input type="radio"
+        //  name="option"
+        //  value="option1"
+         id="Infantil" 
+        //  checked={selectedOption === 'option1'}
+        // onChange={() => handleRadioChange('option1')} 
+        >
+        </input>
         <label for="Infantil">Infantil</label>
       </div>
 
@@ -65,6 +87,58 @@ function Filtro() {
         <label for='Casual'>Casual</label>
       </div>
     </div>
+
+      <div className={style.Pdt}>
+        <h2>Produtos</h2>
+
+      <div className={style.produtos}>
+      <div className={style.produto}>
+        <input type='radio' id='Blusas'></input>
+        <label for='Blusas'>Blusas</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Calça'></input>
+        <label for='Calça'>Calça</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Vestido'></input>
+        <label for='Vestido'>Vestido</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Sandália'></input>
+        <label for='Sandália'>Sandália</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Short'></input>
+        <label for='Short'>Short</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Tẽnis'></input>
+        <label for='Tẽnis'>Tẽnis</label>
+        </div>
+        
+        <div className={style.produto}>
+        <input type='radio' id='Regata'></input>
+        <label for='Regata'>Regata</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Meia'></input>
+        <label for='Meia'>Meia</label>
+        </div>
+
+        <div className={style.produto}>
+        <input type='radio' id='Lingerie'></input>
+        <label for='Lingerie'>Lingerie</label>
+        </div>
+
+      </div>
+      </div>
     <div className={style.Tamanho}>
       <h2>Tamanho</h2>
 

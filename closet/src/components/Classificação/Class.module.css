@@ -19,7 +19,7 @@
 }
 
 .div2{
-    margin-top: -30px;
+    margin-top: -2px;
 }
 
 .Imagem{
@@ -32,17 +32,8 @@
     font-size: 35px;
     margin-top: -20%;
     margin-bottom: 3%;
-    color: rgb(188, 142, 42);
+    color: rgb(186, 140, 42);
 }
-
-/* .icon button{
-    width: 80px;
-    height: 30px;
-    border-radius: 26px;
-    border: none;
-    cursor: pointer;
-    margin-left: 50%;
-} */
 
 .input textarea{
     width: 60%;
@@ -97,18 +88,11 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.X{
-    font-size: 32px;
-    cursor: pointer;
-    margin-left: 1.5%; 
-    color: #09283F;
-    margin-top: -3px;
-}
-
 .Editar {
     font-size: 24px;
     margin-left: 45%;
     color: #09283F;
+    cursor: pointer;
    
 }
 
@@ -116,10 +100,12 @@
     font-size: 24px;
     margin-left: 2%;
     color: #09283F; 
+    cursor: pointer;
 }
 
 .Enviar{
     font-size: 24px;
     margin-left: 2%;
     color: #09283F;
+    cursor: pointer;
 }

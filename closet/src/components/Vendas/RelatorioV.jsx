@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import style from './RelatorioV.module.css'
-import Nav from "../NavBar/Nav"
+import Nav from "../NavBarCliente/Nav"
 import Footer from "../Footer/Footer"
 import React, { useState } from 'react';
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
